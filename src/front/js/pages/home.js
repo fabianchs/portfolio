@@ -27,7 +27,9 @@ export const Home = () => {
 									equipo como un pilar para desarrollo para las organizaciones.
 								</h5>
 							</p>
-							<Button color="success" className="mt-3 text-light" />
+							<button>
+								<i className="fab fa-linkedin" />
+							</button>
 						</Jumbotron>
 					</div>
 				</div>
