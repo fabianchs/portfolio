@@ -27,9 +27,6 @@ export const Home = () => {
 									equipo como un pilar para desarrollo para las organizaciones.
 								</h5>
 							</p>
-							<button>
-								<i className="fab fa-linkedin" />
-							</button>
 						</Jumbotron>
 					</div>
 				</div>
@@ -43,6 +40,7 @@ export const Home = () => {
 				<i className="fab fa-5x fa-react m-2" />
 				<i className="fab  fa-python fa-5x m-2" />
 				<i className="fab fa-github fa-5x m-2" />
+				<i className="fas fa-server fa-5x m-2" />
 			</div>
 		</div>
 	);
