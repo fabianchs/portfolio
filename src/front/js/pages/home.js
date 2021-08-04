@@ -28,6 +28,13 @@ export const Home = () => {
 								</h5>
 							</p>
 						</Jumbotron>
+						<iframe
+							src="https://drive.google.com/file/d/1bGA8-JQEfHy1b3rH07lD7KO3R0b4ccxC/preview"
+							width="640"
+							height="480"
+							allow="autoplay"
+							allowFullScreen
+						/>
 					</div>
 				</div>
 			</div>
