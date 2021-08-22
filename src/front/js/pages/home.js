@@ -8,8 +8,8 @@ export const Home = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="mt-2 text-center">
-			<div className="container d-flex justify-content-center pt-3">
+		<div className="mt-2">
+			<div className="container d-flex justify-content-center pt-3 text-center">
 				<div className="row d-flex justify-content-center">
 					<div className="col-12 m-1">
 						<h1>
@@ -18,9 +18,9 @@ export const Home = () => {
 						</h1>
 					</div>
 					<div className="col-12">
-						<Jumbotron>
+						<div className="text-center p-5 rounded rounded-5" style={{ "background-color": "#e9ecef" }}>
 							<p />
-							<h1 className="display-3">¡Hola! Mi nombre es Fabián Chacón 🇨🇷</h1>
+							<h2 className="display-3">¡Hola! Mi nombre es Fabián Chacón 🇨🇷</h2>
 							<p className="lead">
 								Soy desarrollador Full Stack en entornos Web y estudiante de Ingeniería en Electrónica.
 							</p>
@@ -37,16 +37,7 @@ export const Home = () => {
 							<p className="mt-3">
 								<h5>Mis redes y contacto:</h5>
 							</p>
-							<div className="container-fluid d-flex justify-content-between">
-								<span className="m-1">
-									<a
-										href="https://github.com/fabianchs"
-										target="__blank"
-										className="d-flex align-items-center">
-										<i className="fab fa-github fa-2x" />
-										<span>/fabianchs</span>
-									</a>
-								</span>
+							<div className="row d-flex justify-content-between">
 								<span className="m-1">
 									<a
 										href="https://github.com/fabianchs"
@@ -85,11 +76,11 @@ export const Home = () => {
 									</a>
 								</span>
 							</div>
-						</Jumbotron>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div>
+			<div className="text-center">
 				<i className="fab fa-5x fa-html5 m-2" />
 				<i className="fab fa-css3-alt fa-5x m-2" />
 				<i className="fab fa-5x fa-js-square m-2" />
