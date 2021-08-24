@@ -7,6 +7,8 @@ import { Jumbotron, Button, Link, Toast, ToastBody, ToastHeader } from "reactstr
 export const Home = () => {
 	const { store, actions } = useContext(Context);
 
+	const en_lg=[],
+
 	return (
 		<div className="mt-2 container-fluid">
 			<div className="container d-flex justify-content-center pt-3 text-center">
