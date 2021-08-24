@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
@@ -7,7 +7,43 @@ import { Jumbotron, Button, Link, Toast, ToastBody, ToastHeader } from "reactstr
 export const Home = () => {
 	const { store, actions } = useContext(Context);
 
-	const en_lg=[],
+	const en_lg = [
+		"My name is Fabián Chacón 🇨🇷",
+		"I am a Full Stack developer in Web environments and a student of Electronic Engineering.",
+		"I want to show you a bit of my work!",
+		"I consider myself a problem solver, and I see teamwork as a pillar for development inside organizations.",
+		"My networks and contact",
+		"Some projects done",
+		"Weighted Average Calculator",
+		"Tool to facilitate the calculation of average grades for university students.",
+		"Visit the site",
+		"Movie Repository",
+		"Film appreciation course tool, try to enter the code 1001.",
+		"Simple Counter",
+		"A timer with three buttons for manipulation.",
+		"Todo List",
+		"An interface to create and delete pending tasks using text inputs."
+	];
+
+	const sp_lg = [
+		"Mi nombre es Fabián Chacón 🇨🇷",
+		"Soy desarrollador Full Stack en entornos Web y estudiante de Ingeniería en Electrónica.",
+		"¡Quiero mostrarte un poco de mi trabajo!",
+		"Me considero una persona solucionadora de problemas, y veo el trabajo en equipo como un pilar para desarrollo para las organizaciones.",
+		"Mis redes y contacto:",
+		"Algunos trabajos realizados:",
+		"Calculadora de promedio ponderado",
+		"Herramienta para facilitar el cálculo de promedio para estudiantes universitarios.",
+		"Visitar el sitio",
+		"Repositorio de películas",
+		"Herramienta curso de apreciación de cine, intenta ingresar el código 1001.",
+		"Contador simple",
+		"Un temporizador con tres botones para su manipulación.",
+		"Lista de tareas",
+		"Una interfaz para crear y eliminar tareas pendientes mediante entradas de texto."
+	];
+
+	const [language, setLanguage] = useState(en_lg);
 
 	return (
 		<div className="mt-2 container-fluid">
