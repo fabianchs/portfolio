@@ -52,10 +52,8 @@ export const Home = () => {
 					<div className="col-12">
 						<div className="text-center p-5 rounded rounded-5" style={{ "background-color": "#e9ecef" }}>
 							<p />
-							<h2 className="display-4">Mi nombre es Fabián Chacón 🇨🇷</h2>
-							<p className="lead">
-								Soy desarrollador Full Stack en entornos Web y estudiante de Ingeniería en Electrónica.
-							</p>
+							<h2 className="display-4">{language[0]}</h2>
+							<p className="lead">{language[1]}</p>
 							<p className="lead">
 								<strong>¡Quiero mostrarte un poco de mi trabajo!</strong>
 							</p>
