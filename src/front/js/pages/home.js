@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
-import { Jumbotron, Button, Link, Toast, ToastBody, ToastHeader } from "reactstrap";
+import { Jumbotron, Button, Link, Toast, ToastBody, ToastHeader, FormGroup, Label, Input } from "reactstrap";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -12,17 +12,18 @@ export const Home = () => {
 		"I am a Full Stack developer in Web environments and a student of Electronic Engineering.",
 		"I want to show you a bit of my work!",
 		"I consider myself a problem solver, and I see teamwork as a pillar for development inside organizations.",
-		"My networks and contact",
-		"Some projects done",
+		"My networks and contact:",
+		"Some projects done:",
 		"Weighted Average Calculator",
 		"Tool to facilitate the calculation of average grades for university students.",
 		"Visit the site",
 		"Movie Repository",
 		"Film appreciation course tool, try to enter the code 1001.",
 		"Simple Counter",
-		"A timer with three buttons for manipulation.",
+		"A timer with three buttons for manipulation: pause, rewind and restore .",
 		"Todo List",
-		"An interface to create and delete pending tasks using text inputs."
+		"An interface to create and delete pending tasks using text inputs.",
+		"Idioma:"
 	];
 
 	const sp_lg = [
@@ -40,14 +41,42 @@ export const Home = () => {
 		"Contador simple",
 		"Un temporizador con tres botones para su manipulación.",
 		"Lista de tareas",
-		"Una interfaz para crear y eliminar tareas pendientes mediante entradas de texto."
+		"Una interfaz para crear y eliminar tareas pendientes mediante entradas de texto.",
+		"Language"
 	];
 
 	const [language, setLanguage] = useState(en_lg);
 
+	function changeLg(index) {
+		if (index === 0) {
+			setLanguage(en_lg);
+		} else if (index === 1) {
+			setLanguage(sp_lg);
+		}
+	}
+
 	return (
-		<div className="mt-2 container-fluid">
-			<div className="container d-flex justify-content-center pt-3 text-center">
+		<div className="mt-2 container-fluid" key={language}>
+			<div className="row d-flex justify-content-end m-0 p-0">
+				<span>{language[15]} &nbsp;</span>
+				<FormGroup>
+					<Input type="select" name="select" id="exampleSelect" size="sm">
+						<option
+							onClick={() => {
+								changeLg(0);
+							}}>
+							English
+						</option>
+						<option
+							onClick={() => {
+								changeLg(1);
+							}}>
+							Español
+						</option>
+					</Input>
+				</FormGroup>
+			</div>
+			<div className="container d-flex justify-content-center pt-0 mt-0 text-center">
 				<div className="row d-flex justify-content-center">
 					<div className="col-12">
 						<div className="text-center p-5 rounded rounded-5" style={{ "background-color": "#e9ecef" }}>
@@ -55,17 +84,14 @@ export const Home = () => {
 							<h2 className="display-4">{language[0]}</h2>
 							<p className="lead">{language[1]}</p>
 							<p className="lead">
-								<strong>¡Quiero mostrarte un poco de mi trabajo!</strong>
+								<strong>{language[2]}</strong>
 							</p>
 							<hr className="my-2" />
 							<p className="mt-3">
-								<h5>
-									Me considero una persona solucionadora de problemas, y veo el trabajo en equipo como
-									un pilar para desarrollo para las organizaciones.
-								</h5>
+								<h5>{language[3]}</h5>
 							</p>
 							<p className="mt-3">
-								<h5>Mis redes y contacto:</h5>
+								<h5>{language[4]}</h5>
 							</p>
 							<div className="row d-flex justify-content-between">
 								<span className="m-1">
@@ -122,68 +148,62 @@ export const Home = () => {
 				<i className="fas fa-server fa-5x m-2" />
 			</div>
 			<div className="row mt-3 d-flex justify-content-center text-center">
-				<span className="text-center h3 text-info">Algunos trabajos realizados:</span>
+				<span className="text-center h3 text-info">{language[5]}</span>
 			</div>
 			<div className="row mt-2 d-flex justify-content-center">
 				<div className="m-1">
 					<Toast className="text-center">
-						<ToastHeader>Calculadora de promedio ponderado</ToastHeader>
-						<ToastBody>
-							Herramienta para facilitar el cálculo de promedio para estudiantes universitarios.
-						</ToastBody>
+						<ToastHeader>{language[6]}</ToastHeader>
+						<ToastBody>{language[7]}</ToastBody>
 						<Button
 							size="sm"
 							className="m-1"
 							color="success"
 							href="https://grade-calculator-nine.vercel.app/"
 							target="__blank">
-							Visitar el sitio
+							{language[8]}
 						</Button>
 					</Toast>
 				</div>
 				<div className="m-1">
 					<Toast className="text-center">
-						<ToastHeader>Repositorio de películas</ToastHeader>
-						<ToastBody>
-							Herramienta curso de apreciación de cine, intenta ingresar el código 1001.
-						</ToastBody>
+						<ToastHeader>{language[9]}</ToastHeader>
+						<ToastBody>{language[10]}</ToastBody>
 						<Button
 							size="sm"
 							className="m-1"
 							color="success"
 							href="https://course-cinema.vercel.app/"
 							target="__blank">
-							Visitar el sitio
+							{language[8]}
 						</Button>
 					</Toast>
 				</div>
 				<div className="m-1">
 					<Toast className="text-center">
-						<ToastHeader>Contador simple</ToastHeader>
-						<ToastBody>Un temporizador con tres botones para su manipulación.</ToastBody>
+						<ToastHeader>{language[11]}</ToastHeader>
+						<ToastBody>{language[12]}</ToastBody>
 						<Button
 							size="sm"
 							className="m-1"
 							color="success"
 							href="https://simple-counter-three.vercel.app/"
 							target="__blank">
-							Visitar el sitio
+							{language[8]}
 						</Button>
 					</Toast>
 				</div>
 				<div className="m-1">
 					<Toast className="text-center">
-						<ToastHeader>Lista de tareas</ToastHeader>
-						<ToastBody>
-							Una interfaz para crear y eliminar tareas pendientes mediante entradas de texto.
-						</ToastBody>
+						<ToastHeader>{language[13]}</ToastHeader>
+						<ToastBody>{language[14]}</ToastBody>
 						<Button
 							size="sm"
 							className="m-1"
 							color="success"
 							href="https://exercise-todo-list.vercel.app/"
 							target="__blank">
-							Visitar el sitio
+							{language[8]}
 						</Button>
 					</Toast>
 				</div>
