@@ -57,38 +57,28 @@ export const Home = () => {
 
 	return (
 		<div className="mt-2 container-fluid">
-			<div className="row d-flex justify-content-end m-0 p-0">
+			<div className="row d-flex justify-content-end mb-1 p-0">
 				<span>{language[15]} &nbsp;</span>
-				<FormGroup>
-					<Input type="select" name="select" id="exampleSelect" size="sm">
-						<option
-							value="0"
-							onClick={() => {
-								changeLg(0);
-							}}
-							onSelect={() => {
-								changeLg(0);
-							}}
-							onFocus={() => {
-								changeLg(0);
-							}}>
-							English
-						</option>
-						<option
-							value="1"
-							onClick={() => {
-								changeLg(1);
-							}}
-							onSelect={() => {
-								changeLg(1);
-							}}
-							onFocus={() => {
-								changeLg(1);
-							}}>
-							Español
-						</option>
-					</Input>
-				</FormGroup>
+				<Button
+					color="light"
+					size="sm"
+					className="border-dark"
+					onClick={() => {
+						changeLg(1);
+					}}>
+					🇪🇸 Español
+				</Button>
+				&nbsp;
+				<Button
+					color="light"
+					size="sm"
+					className="border-dark"
+					onClick={() => {
+						changeLg(0);
+					}}>
+					🇺🇲 English
+				</Button>
+				&nbsp;
 			</div>
 			<div className="container d-flex justify-content-center pt-0 mt-0 text-center" key={language}>
 				<div className="row d-flex justify-content-center">
