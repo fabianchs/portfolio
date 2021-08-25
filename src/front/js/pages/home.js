@@ -23,7 +23,7 @@ export const Home = () => {
 		"A timer with three buttons for manipulation: pause, rewind and restore .",
 		"Todo List",
 		"An interface to create and delete pending tasks using text inputs.",
-		"Idioma:"
+		"Language:"
 	];
 
 	const sp_lg = [
@@ -42,7 +42,7 @@ export const Home = () => {
 		"Un temporizador con tres botones para su manipulación.",
 		"Lista de tareas",
 		"Una interfaz para crear y eliminar tareas pendientes mediante entradas de texto.",
-		"Language"
+		"Idioma:"
 	];
 
 	const [language, setLanguage] = useState(en_lg);
